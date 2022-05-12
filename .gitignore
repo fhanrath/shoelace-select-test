@@ -1,4 +1,4 @@
 node_modules
 
-public/shoelace
+public/shoelace/*
 !public/shoelace/.exists
