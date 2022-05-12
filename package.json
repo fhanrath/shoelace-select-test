@@ -1,0 +1,22 @@
+{
+  "name": "shoelace-test",
+  "version": "1.0.0",
+  "main": "dist/app-index.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite --force",
+    "postinstall": "shx cp -r node_modules/@shoelace-style/shoelace/dist/assets public/shoelace/assets && shx cp -r node_modules/@shoelace-style/shoelace/dist/themes public/shoelace/themes && shx sed -i \"s/:host,/:root,:host,/g\" public/shoelace/themes/dark.css"
+  },
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.0.0-beta.73",
+    "lit": "^2.2.3",
+    "@vaadin/router": "^1.7.4"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9",
+    "typescript": "^4.6.4",
+    "shx": "^0.3.4"
+  }
+}
